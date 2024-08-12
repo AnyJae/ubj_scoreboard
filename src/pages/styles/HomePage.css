@@ -1,0 +1,42 @@
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.align-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.align-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  margin-top: 12%;
+}
+
+.title p {
+  margin: 0;
+  font-size: 5rem;
+  color: aliceblue;
+  font-weight: 500;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 0;
+  margin-top: 10%;
+}
+
+.btn {
+  padding: 0 3rem;
+}

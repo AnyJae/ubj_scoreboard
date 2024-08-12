@@ -1,0 +1,24 @@
+.adv-pen {
+  display: inline-grid;
+  grid-template: 70px 70px / 160px 50px;
+  grid-template-areas:
+    "n a"
+    "n s";
+}
+
+.adv-pen span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 6em;
+  grid-area: n;
+}
+
+.adv {
+  background-color: #00e313;
+}
+
+.pen {
+  background-color: #ff0000;
+}

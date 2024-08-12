@@ -1,0 +1,47 @@
+.timer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+}
+
+.time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 180px;
+  color: white;
+  font-size: 180px;
+  padding-bottom: 20px;
+}
+
+.control-btns {
+  width: 100%;
+  background-color: #d9d9d9;
+}
+
+.control-btns button {
+  border: 1px solid white;
+  background-color: #d9d9d9;
+  font-size: 20px;
+  padding: 5px 0;
+}
+
+.control-btns button:hover {
+  background-color: white;
+}
+
+.start-btn,
+.stop-btn {
+  width: 25%;
+}
+
+.plus-btn,
+.minus-btn {
+  width: 18%;
+}
+
+.reset-btn {
+  width: 14%;
+}

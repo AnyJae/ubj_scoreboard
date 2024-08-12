@@ -1,0 +1,35 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+}
+
+.header img {
+  width: 3.3rem;
+}
+.header div,
+.header p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.logo {
+  flex: 1;
+}
+
+.title {
+  flex: 8;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.mat {
+  flex: 1;
+  font-size: 3.2rem;
+  font-weight: 900;
+}
