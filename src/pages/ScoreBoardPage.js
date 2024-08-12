@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Container from "../components/Container";
 import Header from "../components/Header";
 import ScoreControl from "../components/ScoreControl";
@@ -8,9 +8,16 @@ import AdvPen from "../components/AdvPen";
 import Timer from "../components/Timer";
 
 function ScoreBoardPage() {
+  const { mat } = useParams();
+
+  // Refs for input fields
+  const player1Ref = useRef(null);
+  const player2Ref = useRef(null);
+
   //States
-  const [palyer1, setPlayer1] = useState('Player1');
-  const [palyer2, setPlayer2] = useState('Player2');
+  const [player1, setPlayer1] = useState('Player1');
+  const [player2, setPlayer2] = useState('Player2');
+  const [winner, setWinner] = useState('');
   const [score1, setScore1] = useState(0);
   const [score2, setScore2] = useState(0);
   const [advance1, setAdvance1] = useState(0);
@@ -95,56 +102,69 @@ function ScoreBoardPage() {
     }
   }
 
+  //Reset score board
+  const handleReset = () => {
+    if (player1Ref.current) {
+      player1Ref.current.value = '';
+    }
+    if (player2Ref.current) {
+      player2Ref.current.value = '';
+    }
+  setScore1(0);
+  setScore2(0);
+  setAdvance1(0);
+  setAdvance2(0);
+  setPenalty1(0);
+  setPenalty2(0);
+}
 
-  // const handleSubtractScore = (e, who) => {
-  // }
 
-  const { mat } = useParams();
-  return (
-    <>
-      <Container>
-        <Header mat={mat} />
-        <div className="contents">
-          <div className="box box1">
-            <input className="name player1" type="text" placeholder="Player1" onChange={handleGetPlayer}></input>
-            <div style={{ color: 'blue' }}>
-              <Timer/>
-            </div>
-            <input className="name player2" type="text" placeholder="Player2" onChange={handleGetPlayer}></input>
+return (
+  <>
+    <Container>
+      <Header mat={mat} />
+      <div className="contents">
+        <div className="box box1">
+          <input ref={player1Ref} className="name player1" type="text" placeholder="Player1" onChange={handleGetPlayer}></input>
+          <div style={{ color: 'blue' }}>
+            <Timer />
           </div>
-          <div className="box box2">
-            <div className="score-container1">
-              <div className="score">{score1}</div>
-              <div className="special-score">
-                <div className="p-adv">
-                  <AdvPen type="adv" who='player1' advance={advance1} penalty={penalty1} addAdv={addAdvance} subtractAdv={subtractAdvance} addPen={addPenalty} subtractPen={subtractPenalty} />
-                </div>
-                <div className="p-pen">
-                  <AdvPen type="pen" who='player1' advance={advance1} penalty={penalty1} addAdv={addAdvance} subtractAdv={subtractAdvance} addPen={addPenalty} subtractPen={subtractPenalty} />
-                </div>
-              </div>
-            </div>
-            <div className="score-container2">
-              <div className="special-score">
-                <div className="p-adv">
-                  <AdvPen type="adv" who='player2' advance={advance2} penalty={penalty2} addAdv={addAdvance} subtractAdv={subtractAdvance} addPen={addPenalty} subtractPen={subtractPenalty} />
-                </div>
-                <div className="p-pen">
-                  <AdvPen type="pen" who='player2' advance={advance2} penalty={penalty2} addAdv={addAdvance} subtractAdv={subtractAdvance} addPen={addPenalty} subtractPen={subtractPenalty} />
-                </div>
-              </div>
-              <div className="score">{score2}</div>
-            </div>
-
-          </div>
-          <div className="box box3">
-            <ScoreControl who='player1' addScore={addScore} subtractScore={subtractScore} />
-            <ScoreControl who='player1' addScore={addScore} subtractScore={subtractScore} />
-          </div>
+          <input ref={player2Ref} className="name player2" type="text" placeholder="Player2" onChange={handleGetPlayer}></input>
         </div>
-      </Container>
-    </>
-  )
+        <div className="box box2">
+          <div className="score-container1">
+            <div className="score">{score1}</div>
+            <div className="special-score">
+              <div className="p-adv">
+                <AdvPen type="adv" who='player1' advance={advance1} penalty={penalty1} addAdv={addAdvance} subtractAdv={subtractAdvance} addPen={addPenalty} subtractPen={subtractPenalty} />
+              </div>
+              <div className="p-pen">
+                <AdvPen type="pen" who='player1' advance={advance1} penalty={penalty1} addAdv={addAdvance} subtractAdv={subtractAdvance} addPen={addPenalty} subtractPen={subtractPenalty} />
+              </div>
+            </div>
+          </div>
+          <div className="score-container2">
+            <div className="special-score">
+              <div className="p-adv">
+                <AdvPen type="adv" who='player2' advance={advance2} penalty={penalty2} addAdv={addAdvance} subtractAdv={subtractAdvance} addPen={addPenalty} subtractPen={subtractPenalty} />
+              </div>
+              <div className="p-pen">
+                <AdvPen type="pen" who='player2' advance={advance2} penalty={penalty2} addAdv={addAdvance} subtractAdv={subtractAdvance} addPen={addPenalty} subtractPen={subtractPenalty} />
+              </div>
+            </div>
+            <div className="score">{score2}</div>
+          </div>
+
+        </div>
+        <div className="box box3">
+          <ScoreControl who='player1' addScore={addScore} subtractScore={subtractScore} />
+          <button className="all-reset-btn" onClick={handleReset}>reset</button>
+          <ScoreControl who='player2' addScore={addScore} subtractScore={subtractScore} />
+        </div>
+      </div>
+    </Container>
+  </>
+)
 }
 
 export default ScoreBoardPage;
