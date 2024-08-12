@@ -3,16 +3,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 500px;
+  width: 550px;
 }
 
 .time {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 180px;
+  height: 200px;
   color: white;
-  font-size: 180px;
+  font-size: 190px;
   padding-bottom: 20px;
 }
 
