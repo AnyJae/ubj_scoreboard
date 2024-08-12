@@ -16,6 +16,11 @@ function Timer() {
   useEffect(() => {
     setMin(Math.floor(time / 60000));
     setSec(Math.floor((time % 60000) / 1000));
+
+    // 타이머가 0이 되면 beep 호출
+    if (time === 0) {
+      beep();
+    }
   }, [time]);
 
   // start 함수 - 1초씩 감소
@@ -78,7 +83,6 @@ function Timer() {
           {min} : {sec.toString().padStart(2, '0')}
         </div>
         <div className="control-btns">
-          <autio></autio>
           <button className="start-btn" onClick={handleStart}>START</button>
           <button className="stop-btn" onClick={handleStop}>STOP</button>
           <button className="plus-btn" onClick={handleAdd10}>+</button>
