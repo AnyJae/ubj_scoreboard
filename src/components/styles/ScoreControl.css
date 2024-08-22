@@ -1,20 +1,21 @@
-button{
-  margin:0;
+button {
+  margin: 0;
   padding: 0;
   border: none;
   outline: none;
-  background-color: #A7A6A6;
+  background-color: #a7a6a6;
+  color: black;
 }
 
-button:hover{
-  background-color:aliceblue;
+button:hover {
+  background-color: aliceblue;
 }
 
 .score-control {
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
+  color: black;
   display: inline-grid;
-  grid-template: 
-  30px 30px / 35px 35px 40px 35px 35px 40px 35px 35px 40px;
+  grid-template: 30px 30px / 35px 35px 40px 35px 35px 40px 35px 35px 40px;
   grid-template-areas:
     "n2 n2 a2 n3 n3 a3 n4 n4 a4"
     "n2 n2 s2 n3 n3 s3 n4 n4 s4";
@@ -24,48 +25,49 @@ button:hover{
   grid-area: n2;
 }
 
-.three{
+.three {
   grid-area: n3;
 }
 
-.four{
+.four {
   grid-area: n4;
 }
 
-.add2{
+.add2 {
   grid-area: a2;
 }
 
-.add3{
+.add3 {
   grid-area: a3;
 }
 
-.add4{
+.add4 {
   grid-area: a4;
 }
 
-.sub2{
+.sub2 {
   grid-area: s2;
 }
 
-.sub3{
+.sub3 {
   grid-area: s3;
 }
 
-.sub4{
+.sub4 {
   grid-area: s4;
 }
 
-.num, .control{
+.num,
+.control {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.num{
+.num {
   font-size: 40px;
 }
 
-.control{
+.control {
   font-size: 30px;
 }

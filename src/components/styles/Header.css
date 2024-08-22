@@ -23,7 +23,7 @@
 }
 
 .title {
-  color:black;
+  color: black;
   flex: 8;
   font-size: 2rem;
   font-weight: 900;
@@ -33,4 +33,5 @@
   flex: 1;
   font-size: 3.2rem;
   font-weight: 900;
+  color: black;
 }

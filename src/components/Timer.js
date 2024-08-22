@@ -3,21 +3,19 @@ import { useState, useRef, useEffect } from "react";
 import sound from '../assets/beep.mp3';
 
 function Timer() {
+   // 시간 데이터
   const initTime = 360000; // 6분
   const initMin = initTime / 60000;
 
-  // 분, 초
   const [time, setTime] = useState(initTime);
   const [min, setMin] = useState(initMin);
   const [sec, setSec] = useState(0);
   const timeId = useRef(null);
 
-  // time 상태가 변경될 때마다 min과 sec를 업데이트
+  // time 상태가 변경될 때마다 min과 sec를 업데이트, 0분 0초가 되면 알림음
   useEffect(() => {
     setMin(Math.floor(time / 60000));
     setSec(Math.floor((time % 60000) / 1000));
-
-    // 타이머가 0이 되면 beep 호출
     if (time === 0) {
       beep();
     }
@@ -25,10 +23,13 @@ function Timer() {
 
   // start 함수 - 1초씩 감소
   const handleStart = () => {
+    //타이머 시작 시 알림음
     beep();
+    
     if (!timeId.current) {
       timeId.current = setInterval(() => {
         setTime(prevTime => {
+          //0분 0초에서 타이머를 멈추도록 처리
           if (prevTime <= 1000) {
             clearInterval(timeId.current);
             timeId.current = null;
@@ -71,7 +72,6 @@ function Timer() {
     const startSound = new Audio(sound);
     startSound.load();
     startSound.play();
-
   }
 
 
