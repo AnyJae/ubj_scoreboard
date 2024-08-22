@@ -4,7 +4,12 @@ body {
 }
 
 .contents {
+  overflow: auto;    
   width: 90%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
 }
 
 .box1 {
@@ -19,7 +24,7 @@ body {
   background-color: rgba(0, 0, 0, 0);
   border: 0;
   width: 30%;
-  height: 12.5rem;
+  /* height: 12.5rem; */
   color: aliceblue;
   font-size: 6vw;
   font-weight: 800;
@@ -39,13 +44,13 @@ body {
   margin-top: 15px;
   display: flex;
   width: 100%;
-  height: 20rem;
+  /* height: 20rem; */
 }
 
 .box2 .score-container1,
 .box2 .score-container2 {
   width: 50%;
-  height: 100%;
+  /* height: 100%; */
   border: 2px solid white;
 
   display: flex;
@@ -86,7 +91,7 @@ padding: 5px 15px;
 
 .all-reset-btn {
   width: 11%;
-  height: 3rem;
+  height: 6.5vh;
   font-size: 1.8vw;
   background-color: #d9d9d9;
 }
