@@ -15,9 +15,9 @@ function ScoreBoardPage() {
   const player2Ref = useRef(null);
 
   //States
-  const [player1, setPlayer1] = useState('Player1');
-  const [player2, setPlayer2] = useState('Player2');
-  const [winner, setWinner] = useState('');
+  // const [player1, setPlayer1] = useState('Player1');
+  // const [player2, setPlayer2] = useState('Player2');
+  // const [winner, setWinner] = useState('');
   const [score1, setScore1] = useState(0);
   const [score2, setScore2] = useState(0);
   const [advance1, setAdvance1] = useState(0);
@@ -26,18 +26,18 @@ function ScoreBoardPage() {
   const [penalty2, setPenalty2] = useState(0);
 
   //Get player name
-  const handleGetPlayer = (e) => {
-    const player = e.target;
-    const isFirst = player.classList.contains('player1');
-    const isSecond = player.classList.contains('player2');
-    if (isFirst) {
-      setPlayer1(player.value);
-    } else if (isSecond) {
-      setPlayer2(player.value);
-    } else {
-      console.log("지정된 선수가 없습니다.");
-    }
-  }
+  // const handleGetPlayer = (e) => {
+  //   const player = e.target;
+  //   const isFirst = player.classList.contains('player1');
+  //   const isSecond = player.classList.contains('player2');
+  //   if (isFirst) {
+  //     setPlayer1(player.value);
+  //   } else if (isSecond) {
+  //     setPlayer2(player.value);
+  //   } else {
+  //     console.log("지정된 선수가 없습니다.");
+  //   }
+  // }
 
   //Control score
   const addScore = (num, who) => {
@@ -125,11 +125,11 @@ return (
       <Header mat={mat} />
       <div className="contents">
         <div className="box box1">
-          <input ref={player1Ref} className="name player1" type="text" placeholder="Player1" onChange={handleGetPlayer}></input>
+          <input ref={player1Ref} className="name player1" type="text" placeholder="Player1"></input>
           <div style={{ color: 'blue' }}>
             <Timer />
           </div>
-          <input ref={player2Ref} className="name player2" type="text" placeholder="Player2" onChange={handleGetPlayer}></input>
+          <input ref={player2Ref} className="name player2" type="text" placeholder="Player2"></input>
         </div>
         <div className="box box2">
           <div className="score-container1">
