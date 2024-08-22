@@ -7,7 +7,7 @@
 }
 
 .header img {
-  width: 3.3rem;
+  width: 3.2vw;
 }
 .header div,
 .header p {
@@ -25,13 +25,13 @@
 .title {
   color: black;
   flex: 8;
-  font-size: 2rem;
+  font-size: 2.3vw;
   font-weight: 900;
 }
 
 .mat {
   flex: 1;
-  font-size: 3.2rem;
+  font-size: 3.2vw;
   font-weight: 900;
   color: black;
 }

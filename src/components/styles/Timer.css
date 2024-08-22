@@ -3,16 +3,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 550px;
+  width: 40%;
 }
 
 .time {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 200px;
+  height: 12.5rem;
   color: white;
-  font-size: 190px;
+  font-size: 12vw;
   padding-bottom: 20px;
 }
 
@@ -24,7 +24,7 @@
 .control-btns button {
   border: 1px solid white;
   background-color: #d9d9d9;
-  font-size: 20px;
+  font-size: 1.4vw;
   padding: 5px 0;
 }
 

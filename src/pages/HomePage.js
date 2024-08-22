@@ -28,9 +28,7 @@ function HomePage() {
             <p>전국대학생주짓수대회</p>
             <p>Score Board</p>
           </div>
-          <div >
             <MatButtons />
-          </div>
         </Container>
       </div>
     </>

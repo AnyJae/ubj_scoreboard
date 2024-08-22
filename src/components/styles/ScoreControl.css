@@ -12,13 +12,19 @@ button:hover {
 }
 
 .score-control {
+  width: 100%;
   background-color: #d9d9d9;
   color: black;
   display: inline-grid;
-  grid-template: 30px 30px / 35px 35px 40px 35px 35px 40px 35px 35px 40px;
+  grid-template: 50% 50% / 2.3fr 1fr 2.3fr 1fr 2.3fr 1fr;
   grid-template-areas:
-    "n2 n2 a2 n3 n3 a3 n4 n4 a4"
-    "n2 n2 s2 n3 n3 s3 n4 n4 s4";
+    "n2 a2 n3 a3 n4 a4"
+    "n2 s2 n3 s3 n4 s4";
+  font-size: 3vw;
+}
+
+.score-control .control{
+  font-size: 2vw;
 }
 
 .two {
@@ -64,10 +70,3 @@ button:hover {
   align-items: center;
 }
 
-.num {
-  font-size: 40px;
-}
-
-.control {
-  font-size: 30px;
-}

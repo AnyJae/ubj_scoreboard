@@ -3,27 +3,6 @@ body {
   margin: 0;
 }
 
-.name {
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0);
-  border: 0;
-  width: 360px;
-  height: 200px;
-  color: aliceblue;
-  font-size: 80px;
-  font-weight: 800;
-}
-
-.name::placeholder {
-  color: rgba(194, 194, 194, 0.442);
-  font-weight: 300;
-  font-size: 50px;
-}
-
-.name:focus {
-  outline: none;
-}
-
 .contents {
   width: 90%;
 }
@@ -33,6 +12,27 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+.box1 .name {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0);
+  border: 0;
+  width: 30%;
+  height: 12.5rem;
+  color: aliceblue;
+  font-size: 6vw;
+  font-weight: 800;
+}
+
+.box1 .name::placeholder {
+  color: rgba(194, 194, 194, 0.442);
+  font-weight: 300;
+  font-size: 3.7vw;
+}
+
+.box1 .name:focus {
+  outline: none;
 }
 
 .box2 {
@@ -52,26 +52,25 @@ body {
 }
 
 .box2 .score {
-  width: 60%;
+  width: 67%;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
   color: white;
-  font-size: 13rem;
+  font-size: 14vw;
 }
 
 .box2 .special-score {
-  width: 40%;
+  width: 33%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
-.box2 .p-pen {
-  margin-top: 15px;
+.p-adv, .p-pen{
+padding: 5px 15px;
 }
 
 .box3 {
@@ -81,9 +80,13 @@ body {
   align-items: center;
 }
 
+.box3 .score-control-container{
+  width: 25%;
+}
+
 .all-reset-btn {
-  width: 7rem;
+  width: 11%;
   height: 3rem;
-  font-size: 1.5rem;
+  font-size: 1.8vw;
   background-color: #d9d9d9;
 }

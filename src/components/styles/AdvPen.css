@@ -1,6 +1,7 @@
 .adv-pen {
+  width: 100%;
   display: inline-grid;
-  grid-template: 70px 70px / 160px 50px;
+  grid-template: 50% 50% / 75% 25%;
   grid-template-areas:
     "n a"
     "n s";
@@ -11,8 +12,12 @@
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 6em;
+  font-size: 7.5vw;
   grid-area: n;
+}
+
+.adv-pen .control{
+  font-size: 2vw;
 }
 
 .adv {

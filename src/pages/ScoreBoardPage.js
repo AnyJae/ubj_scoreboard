@@ -126,9 +126,7 @@ return (
       <div className="contents">
         <div className="box box1">
           <input ref={player1Ref} className="name player1" type="text" placeholder="Player1"></input>
-          <div style={{ color: 'blue' }}>
-            <Timer />
-          </div>
+          <Timer />
           <input ref={player2Ref} className="name player2" type="text" placeholder="Player2"></input>
         </div>
         <div className="box box2">
@@ -157,9 +155,14 @@ return (
 
         </div>
         <div className="box box3">
-          <ScoreControl who='player1' addScore={addScore} subtractScore={subtractScore} />
+          <div className="score-control-container">
+            <ScoreControl who='player1' addScore={addScore} subtractScore={subtractScore} />
+          </div>
           <button className="all-reset-btn" onClick={handleReset}>reset</button>
-          <ScoreControl who='player2' addScore={addScore} subtractScore={subtractScore} />
+          <div className="score-control-container">
+            <ScoreControl who='player2' addScore={addScore} subtractScore={subtractScore} />
+          </div>
+
         </div>
       </div>
     </Container>
