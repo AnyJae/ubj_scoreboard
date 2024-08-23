@@ -30,6 +30,7 @@ body {
   font-size: 6vw;
   font-weight: 800;
   flex-grow: 1;
+  flex-shrink: 1;
 }
 
 .box1 .name::placeholder {
@@ -52,6 +53,7 @@ body {
   margin-top: 15px;
   display: flex;
   flex-grow: 1;
+  flex-shrink: 1;
   width: 100%;
 }
 
