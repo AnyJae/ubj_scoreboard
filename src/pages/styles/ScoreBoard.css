@@ -43,8 +43,10 @@ body {
 }
 
 .box1 .player2{
-  color:rgb(251, 255, 0)
+  color:rgb(251, 255, 0);
 }
+
+
 
 .box2 {
   margin-top: 15px;
@@ -70,6 +72,11 @@ body {
   color: white;
   font-size: 14vw;
 }
+
+.box2 .score2{
+  color:rgb(251, 255, 0);
+}
+
 
 .box2 .special-score {
   width: 35%;

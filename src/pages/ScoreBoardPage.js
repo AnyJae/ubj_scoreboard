@@ -150,9 +150,8 @@ return (
                 <AdvPen type="pen" who='player2' advance={advance2} penalty={penalty2} addAdv={addAdvance} subtractAdv={subtractAdvance} addPen={addPenalty} subtractPen={subtractPenalty} />
               </div>
             </div>
-            <div className="score">{score2}</div>
+            <div className="score score2">{score2}</div>
           </div>
-
         </div>
         <div className="box box3">
           <div className="score-control-container">
